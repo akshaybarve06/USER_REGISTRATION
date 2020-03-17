@@ -11,7 +11,7 @@ read -p "Enter First Name " firstname
 
 pattern="^[A-Z][a-z]{2,}$"
 
-if [[ $username =~ $pattern ]]
+if [[ $firstname =~ $pattern ]]
 then
 	echo Valid
 else
