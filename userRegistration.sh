@@ -5,7 +5,9 @@
 # @ Version: 18.04.3 lts
 # @ Since: 17th March 2020 / Tuesday
 
-read -p "Enter Username " username
+checkDetails()
+{
+read -p "Enter First Name " firstname
 
 pattern="^[A-Z][a-z]{2,}$"
 
@@ -15,4 +17,5 @@ then
 else
 	echo Invalid
 fi
-
+}
+checkDetails
