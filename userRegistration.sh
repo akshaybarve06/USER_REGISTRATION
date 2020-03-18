@@ -23,19 +23,19 @@ checkFirstName()
 checkLastName()
 {
 	read -p "Enter Last Name " lastname
-   if [[ $lastname =~ $namePattern ]]; then
-      echo Valid Last Name
-   else
-      echo Invalid Last Name
-   fi
+	if [[ $lastname =~ $namePattern ]]; then
+		echo Valid Last Name
+	else
+		echo Invalid Last Name
+	fi
 }
 checkEmail()
 {
 	read -p "Enter Email-id " email
 	if [[ $email =~ $emailPattern ]]; then
-   	echo Valid Email-Id
+   		echo Valid Email-Id
 	else
-   	echo Invalid Email-Id
+   		echo Invalid Email-Id
 	fi
 }
 checkMobileNumber()
@@ -43,20 +43,20 @@ checkMobileNumber()
 	echo "Enter Mobile Number With Country Code "
 	read mobile
 	if [[ $mobile =~ $mobilePattern ]]; then
-      echo Valid Mobile Number
-   else
-      echo Invalid Mobile Number
-   fi
+      	echo Valid Mobile Number
+   	else
+      	echo Invalid Mobile Number
+   	fi
 }
 checkPassword()
 {
-   read -p "Enter password " mobile
-	if [[ ${#mobile} -ge 8 ]]; then
-   	if [[ $mobile =~ $passwordPattern ]]; then
-      	echo Valid Password
-   	else
-      	echo Invalid Password
-   	fi
+   read -p "Enter password " password
+	if [[ ${#password} -ge 8 ]]; then
+	   	if [[ $password =~ $passwordPattern ]]; then
+	      	echo Valid Password
+	   	else
+	      	echo Invalid Password
+	   	fi
 	else
 		echo Password Should Be Min 8 Chars Long
 	fi
