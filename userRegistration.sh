@@ -4,12 +4,12 @@ shopt -s extglob
 # @ Description: User Registration Problem
 # @ Author: Akshay Dhananjay Barve
 # @ Version: 18.04.3 lts
-# @ Since: 17th March 2020 / Tuesday
+# @ Since: 18th March 2020 / Wednesday
 
 namePattern="^[A-Z][a-z]{2,}$"
 emailPattern="^[a-zA-Z]{1,}([.]?[a-zA-Z]{1,})?[@]{1}[a-zA-Z]{1,}[.]{1}[a-z]{2,3}([.]?[a-z]{2})?$"
 mobilePattern="^([0-9]{2}\s{1}[0-9]{10})$"
-passwordPattern="[a-zA-Z0-9]$"
+passwordPattern="([a-z]][0-9]*)|([A-Z][0-9]*)|([a-z][A-Z][a-z0-9]*)$"
 
 checkFirstName()
 {
@@ -52,9 +52,13 @@ checkPassword()
 {
    read -p "Enter password " mobile
 	if [[ ${#mobile} -ge 8 ]]; then
-      echo Valid Password
+   	if [[ $mobile =~ $passwordPattern ]]; then
+      	echo Valid Password
+   	else
+      	echo Invalid Password
+   	fi
 	else
-		echo Password Should Be Min 8 Character Long
+		echo Password Should Be Min 8 Chars Long
 	fi
 }
 checkFirstName
