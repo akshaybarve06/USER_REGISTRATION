@@ -9,7 +9,7 @@ shopt -s extglob
 namePattern="^[A-Z][a-z]{2,}$"
 emailPattern="^[a-zA-Z]{1,}([.]?[a-zA-Z]{1,})?[@]{1}[a-zA-Z]{1,}[.]{1}[a-z]{2,3}([.]?[a-z]{2})?$"
 mobilePattern="^([0-9]{2}\s{1}[0-9]{10})$"
-passwordPattern="([a-z]][0-9]*)|([A-Z][0-9]*)|([a-z][A-Z][a-z0-9]*)$"
+passwordPattern="([a-z0-9]*[A-Z])|([A-Z][0-9]*)$"
 
 checkFirstName()
 {
