@@ -61,8 +61,8 @@ checkPassword()
 		echo Password Should Be Min 8 Chars Long
 	fi
 }
-#checkFirstName
-#checkLastName
+checkFirstName
+checkLastName
 checkEmail
-#checkMobileNumber
-#checkPassword
+checkMobileNumber
+checkPassword
